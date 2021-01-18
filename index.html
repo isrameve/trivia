@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+     
+    <title>Getting Api</title>
+</head>
+<body>
+    <div class="container">
+        <h5>Filtering</h5>
+        <hr>
+
+        <form>
+            <div class="mb-3">
+                <label for="how-many" class="form-label">How many questions do you wanna in your Tribia</label>
+                <select id="how-many" class="form-select" aria-label="howMany">
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="30">30</option>
+                    <option value="40">40</option>
+                    <option value="50">50</option>
+                </select>            
+            </div>
+
+            <div class="mb-3">
+                <label for="categories" class="form-label">Categories</label>
+                <select id="categories" class="form-select" aria-label="categories">
+                    <!-- Opciones generadas con JS -->
+                </select>
+            </div>
+
+            <button onsubmit="event.preventDefault(), getApi()" type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+        <!-- Print the Questions -->
+        <div id="container-questions" class="row">
+            <!-- Here is the content -->
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
