@@ -11,36 +11,47 @@
 </head>
 <body>
     <div class="container">
-        <h5>Filtering</h5>
+        <h5 class="mt-3">Filtering</h5>
         <hr>
+        <div class="row">
+            <div class="col">
+                <div class="cad">
+                    <div class="card-body">
+                        <form action="questions" id="form-questions">
+                            <div class="mb-3">
+                                <label for="how-many">How many questions</label>
+                                <select id="how-many" class="form-control">
+                                    <option value="10">10</option>
+                                    <option value="20">20</option>
+                                    <option value="30">30</option>
+                                    <option value="40">40</option>
+                                    <option value="50">50</option>
+                                </select>            
+                            </div>
 
-        <form>
-            <div class="mb-3">
-                <label for="how-many" class="form-label">How many questions do you wanna in your Tribia</label>
-                <select id="how-many" class="form-select" aria-label="howMany">
-                    <option value="10">10</option>
-                    <option value="20">20</option>
-                    <option value="30">30</option>
-                    <option value="40">40</option>
-                    <option value="50">50</option>
-                </select>            
+                            <div class="mb-3">
+                                <label for="categories">Categories</label>
+                                <select id="categories" class="form-control">
+                                    <option value="">Select a Category</option>
+                                    <!-- Opciones generadas con JS / UI.js -->
+                                </select>
+                            </div>
+
+                            <button class="btn btn-primary btn-block" type="submit">
+                                Get Questions
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                
             </div>
-
-            <div class="mb-3">
-                <label for="categories" class="form-label">Categories</label>
-                <select id="categories" class="form-select" aria-label="categories">
-                    <!-- Opciones generadas con JS -->
-                </select>
-            </div>
-
-            <button onsubmit="event.preventDefault(), getApi()" type="submit" class="btn btn-primary">Submit</button>
-        </form>
+        </div>
 
         <!-- Print the Questions -->
         <div id="container-questions" class="row">
             <!-- Here is the content -->
         </div>
     </div>
-    <script src="./main.js"></script>
+    <script type="module" src="./main.js"></script>
 </body>
 </html>
