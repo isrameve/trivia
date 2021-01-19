@@ -10,10 +10,11 @@ export default class UI {
     //Printing Questions
     static printQuestions(questions) {
         const container = document.getElementById('container-questions');
-        
+        container.innerHTML = '';
+
         questions.forEach((question) => {
             container.innerHTML += `<div class="container-card col-md-4 mt-4">
-                                        <div class="my-card card">
+                                        <div class="my-card card h-100">
                                             <div class="card-body"> 
                                                 ${question.question}
                                             </div>
